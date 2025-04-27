@@ -8,6 +8,7 @@ import { WeatherDetails } from "@/components/ui/weather-details";
 import { useGeolocation } from "@/hooks/use-geolocation";
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from "@/hooks/use-weather";
 import { AlertTriangle, MapPin, RefreshCw, } from "lucide-react";
+import { FavoriteCities } from "@/components/ui/favorite-cities";
 
 const WeatherDashboard = () => {
   const {
@@ -92,6 +93,7 @@ const WeatherDashboard = () => {
   return (
     <div className="space-y-4">
       {/* Favorite cities */}
+      <FavoriteCities />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
         <Button
